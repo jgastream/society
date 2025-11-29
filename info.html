@@ -170,11 +170,11 @@
 <div class="container">
 
   <div class="header">
-    <div class="back" onclick="history.back()">Back to Articles</div>
+    <div class="back" onclick="history.back()">Back</div>
     <h1 id="title">Loading article...</h1>
     <div class="meta">
-      <div><span class="date" id="date">—</span> • <span id="author">MW Team</span></div>
-      <span class="category" id="category">NEWS</span>
+      <div><span class="date" id="date"></span> <span id="author"></span></div>
+      <span class="category" id="category"></span>
     </div>
   </div>
 
@@ -187,7 +187,7 @@
     <div class="content-right">
       <div class="actions">
         <button id="downloadBtn" class="btn download-btn" style="display:none;">Download Video</button>
-        <button id="shareBtn" class="btn share-btn">Share Article</button>
+        <button id="shareBtn" class="btn share-btn">Share </button>
       </div>
       <div class="desc" id="desc"></div>
       <div class="stats" id="stats" style="display:none;">Views: <span id="viewsCount">0</span></div>
@@ -282,7 +282,7 @@
     document.getElementById('author').textContent = adminName === "MW Team" ? "MW Team" : `By ${adminName}`;
 
     const type = (data.type || 'news').toLowerCase();
-    const cat = type === 'news' ? 'NEWS' : type === 'stories' ? 'STORIES' : type === 'scandals' ? 'SCANDALS' : type === 'entertainment' ? 'ENTERTAINMENT' : 'UPDATE';
+    const cat = type === 'news' ? 'NEWS' : type === 'stories' ? 'FOREX' : type === 'scandals' ? 'SCANDALS' : type === 'entertainment' ? 'EDUCATION' : 'UPDATE';
     document.getElementById('category').textContent = cat;
 
     const mediaDiv = document.getElementById('media');
