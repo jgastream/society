@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Primary SEO -->
-  <title>MWtether Society – Global News, Scandals & Entertainment</title>
+  <title>MWtether Society – Forex news and set-ups, Scandals & Education</title>
   <meta name="description" content="Latest global news, celebrity scandals, real stories and entertainment updates. Fresh content daily.">
   <link rel="canonical" href="https://mwtether.online/">
   
@@ -15,8 +15,8 @@
   <!-- Open Graph (Facebook, WhatsApp, Discord, iMessage, etc.) -->
   <meta property="og:url" content="https://mwtether.online/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="MWtether Society – Global News, Scandals & Entertainment">
-  <meta property="og:description" content="Latest global news, celebrity scandals, real stories and entertainment updates. Fresh content daily.">
+  <meta property="og:title" content="MWtether Society – Forex and forex, Scandals & Education">
+  <meta property="og:description" content="Latest global economic news, celebrity scandals, real stories and education updates.">
   <meta property="og:image" content="https://mwtether.online/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -25,10 +25,10 @@
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="MWtether Society – Global News, Scandals & Entertainment">
-  <meta name="twitter:description" content="Latest global news, celebrity scandals, real stories and entertainment updates.">
+  <meta name="twitter:title" content="MWtether Society – Global News, forex, Scandals & Education">
+  <meta name="twitter:description" content="Latest global news, forex signals, celebrity scandals, real stories and education updates.">
   <meta name="twitter:image" content="https://mwtether.online/og-image.jpg">
-  <meta name="twitter:site" content="@mwtethersociety"> <!-- change if you have a handle -->
+  <meta name="twitter:site" content="@mwtethersociety"> 
 
   <!-- Extra SEO & Browser -->
   <meta name="robots" content="index, follow">
@@ -36,7 +36,7 @@
   <meta name="author" content="MWtether Society">
   <meta name="language" content="en">
 
-  <!-- Favicon (add these files later if you want) -->
+  <!-- Favicon-->
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
@@ -100,14 +100,14 @@
 
 <header>
   <h1>MWtether Society</h1>
-  <p class="tagline">Global News• Stories• Scandals• Entertainment</p>
+  <p class="tagline"> News• Profitable Forex Analysis•Scandals• Eduroom</p>
 </header>
 
 <nav class="topnav">
   <button data-tab="all" class="tabBtn active">All</button>
   <button data-tab="news" class="tabBtn">News</button>
-  <button data-tab="stories" class="tabBtn">Stories</button>
-  <button data-tab="entertainment" class="tabBtn">Entertainment</button>
+  <button data-tab="stories" class="tabBtn">FX signals</button>
+  <button data-tab="entertainment" class="tabBtn">Education </button>
   <button data-tab="scandals" class="tabBtn">Scandals</button>
   <a href="#">About</a>
 </nav>
@@ -115,7 +115,7 @@
 <input type="text" id="searchInput" placeholder="Search article…">
 
 <main class="articles" id="articlesContainer">
-  <div class="loading">Loading…</div>
+  <div class="loading">Wait while we're loading the data</div>
 </main>
 
 <div class="footer-fixed">
@@ -127,7 +127,7 @@
     <h2>Scandals Section</h2>
     <p>You may have found some articles not suitable for your age. Please answer the question below to verify that you attend class 1 of secondary level mathematics. </p>
     <p style="margin:24px 0;font-weight:600;">Solve: 3<sup>2x</sup> = 81</p>
-    <input type="text" id="ageAnswer" placeholder="answer is 2" autofocus>
+    <input type="text" id="ageAnswer" placeholder="" autofocus>
     <button id="submitAge">Enter</button>
     <div id="wrongMsg" style="color:#ff3333;margin-top:14px;display:none;font-weight:600;">Wrong answer – try again</div>
   </div>
@@ -239,8 +239,8 @@
 
       let categoryDisplay = 'UPDATE';
       if (type === 'news') categoryDisplay = 'NEWS';
-      else if (type === 'stories') categoryDisplay = 'STORIES';
-      else if (type === 'entertainment') categoryDisplay = 'ENTERTAINMENT';
+      else if (type === 'stories') categoryDisplay = 'FX SIGNALS';
+      else if (type === 'entertainment') categoryDisplay = 'EDUCATION';
       else if (type === 'scandals') categoryDisplay = 'SCANDALS';
 
       article.innerHTML = `
