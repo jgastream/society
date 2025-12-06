@@ -1,8 +1,8 @@
-
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
 import { getFirestore, collection, getDocs, orderBy, query } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
+import fs from "fs";
 
+// Firebase config
 const app = initializeApp({
   apiKey: "AIzaSyDZEiPKwBXshLCdYqQ1kyaEzKz_SJYJH2k",
   authDomain: "mwtether.firebaseapp.com",
@@ -14,13 +14,11 @@ const app = initializeApp({
 
 const db = getFirestore(app);
 
-// Fetch all articles, sorted by timestamp desc
 async function generateSitemap() {
   const q = query(collection(db, 'videos'), orderBy('timestamp', 'desc'));
   const snap = await getDocs(q);
   const articles = snap.docs.map(d => ({ id: d.id, timestamp: d.data().timestamp }));
 
-  // Build XML with real data
   let xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -53,11 +51,8 @@ async function generateSitemap() {
   return xml;
 }
 
-// Generate and display
+// Write the XML to a file
 generateSitemap().then(xml => {
-  const contentType = 'application/xml; charset=utf-8';
-  document.documentElement.innerHTML = `<pre style="white-space:pre-wrap;word-wrap:break-word;">${xml}</pre>`;
-  document.head.innerHTML = `<title>sitemap.xml</title><meta charset="UTF-8">`;
-  
-  console.log('Sitemap generated! Copy the XML above to verify.');
+  fs.writeFileSync('sitemap.xml', xml, 'utf8');
+  console.log('✅ sitemap.xml generated! Upload this file to your server.');
 });
